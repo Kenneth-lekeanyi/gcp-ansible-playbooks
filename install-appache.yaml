@@ -1,0 +1,14 @@
+---
+  - hosts: webserver
+    become: yes
+    tasks:
+    # Task 1:
+    - name: installing appache
+      yum:
+        name: httpd
+        state: present
+    # Task  2:
+    - name: starting appache
+      service:
+        name: httpd
+        state: started
