@@ -1,0 +1,30 @@
+---
+  - hosts: webserver
+    become: yes
+    tasks:
+    # Task 1:
+    - name: installing appache
+      yum:
+        name: httpd
+        state: present
+    # Task  2:
+    - name: starting appache
+      service:
+        name: httpd
+        state: started
+
+# This command will install wget in your OS
+sudo yum install wget -y
+
+# Now, cat the file to make sure that it is in good shape. So do
+cat install-appache.yaml
+
+# check in the webserver terminal if appache httpd is not present there already. so in that webserver terminal, do
+sudo systemctl status httpd
+
+# The command to execute a playbook is 
+ansible-playbook <insert playbook name here>
+ansible-playbook install-apache.
+ansible-playbook install-apache.yaml -v  {use the -v "verbouse" so that you want Ansible to give you a detail of what it is doing - for troubleshooting}
+
+#

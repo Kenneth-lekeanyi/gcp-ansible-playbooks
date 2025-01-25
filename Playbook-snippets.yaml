@@ -1,0 +1,28 @@
+---
+  - hosts:     {This will be the group e.g webserver}
+    become:       {This represents the priviledges. if you want to escalate, you type "yes" if not, type "no"}
+    tasks:
+    # Task 1:
+    - name:       {This is the description of what the module or action will be doing}
+      module:       {This is the action that you want to perform e.g yum, apt get, service, copy, user, ping etc}
+        name:         { This is the name of what you want to install}
+        state:           {This is the state that you want it to take}
+    # Task  2:
+    - name:
+      module:
+        name:
+        state:
+---
+  - hosts:
+    become:
+    tasks:
+    # Task 1:
+    - name:
+      module:
+        name:
+        state:
+    # Task  2:
+    - name:
+      module:
+        name:
+        state:
